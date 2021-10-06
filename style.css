@@ -89,18 +89,18 @@ ul {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  line-height: 130%;
+  line-height: 120%;
 }
 
 .title--h1 {
   font-size: 47px;
   font-weight: 700;
+  margin-bottom: -14px;
 }
 
 .title--h2 {
   font-size: 34px;
   text-align: center;
-
 }
 
 .title--features {
@@ -126,7 +126,7 @@ p {
   text-align: center;
 }
 
-.main-nav__line {
+.header-line {
   background-color: var(--color-text-gray);
   padding: 0;
   margin: 0;
@@ -149,15 +149,19 @@ p {
 .intro__inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.intro__inner p {
+  line-height: 130%;
 }
 
 .intro__locale {
-  transform: rotate(270deg);
+  transform: rotate(270deg) translateX(50%) translateY(150%);
   display: flex;
 }
 
-.intro_img {
+.intro__img {
   padding-top: 50px;
 }
 
@@ -193,6 +197,19 @@ p {
 
 .skills__item {
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__item img {
+  margin-bottom: 28px;
+}
+
+.skills__text {
+  color: var(--color-text-gray);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .skills__stars {
@@ -207,11 +224,11 @@ p {
   color: var(--color-text-lightGray);
 }
 
-.skills__stars > span:before {
+.skills__stars span:before {
   content: "★";
 }
 
-.skills__stars > span.skills__active {
+.skills__stars span.skills__active {
   color: var(--color-text-black);
 }
 
@@ -227,15 +244,15 @@ p {
   flex-direction: column;
 }
 
-.portfolio__inner > img {
+.portfolio__inner img {
   margin-bottom: 44px;
 }
 
-.portfolio__inner > a {
+.portfolio__inner a {
   margin-bottom: 100px;
 }
 
-.portfolio__inner > a:last-child {
+.portfolio__inner a:last-child {
   margin-bottom: 0;
 }
 
