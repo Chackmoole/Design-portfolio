@@ -16,10 +16,39 @@ body {
   font-family: 'Khula', sans-serif;
   font-size: 18px;
   font-style: normal;
-  line-height: 100%;
+  line-height: 120%;
   color: var(--color-text-black);
   background-color: var(--color-bg-white);
   min-width: 1100px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+  text-align: center;
+}
+
+.title--h1 {
+  font-size: 47px;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-black);
+  margin: 0 auto;
+  text-align: center;
 }
 
 ul {
@@ -42,25 +71,9 @@ ul {
   margin: -1px;
 }
 
-.link {
-  display: block;
-  text-decoration: none;
-  color: var(--color-text-black);
-  margin: 0 auto;
-}
-
-.link--nav {
-  font-weight: bold;
-  color: var(--color-text-gray);
-}
-
-.link--active {
-  color: var(--color-text-black);
-}
-
 .button {
   display: block;
-  width: 180px;
+  min-width: 180px;
   height: 42px;
   color: var(--color-text-white);
   background-color: var(--color-bg-black);
@@ -73,72 +86,21 @@ ul {
   margin-bottom: 92px;
 }
 
-.socials {
-  display: flex;
-  justify-content: space-between;
-  width: 342px;
-  margin: 0 auto;
-  margin-bottom: 44px;
-}
-
-.socials__links {
-
-}
-
-.title {
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  line-height: 120%;
-}
-
-.title--h1 {
-  font-size: 47px;
-  font-weight: 700;
-  margin-bottom: -14px;
-}
-
-.title--h2 {
-  font-size: 34px;
-  text-align: center;
-}
-
-.title--features {
-  margin-bottom: 18px;
-}
-
-.title--skills {
-  margin-bottom: 70px;
-}
-
-.title--portfolio {
-  margin-bottom: 48px;
-}
-
-.title--contacts {
-  margin-bottom: 20px;
-}
-
-p {
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.header-line {
-  background-color: var(--color-text-gray);
-  padding: 0;
-  margin: 0;
-  border: none;
-  height: 1px;
-}
-
 .main-nav {
   display: flex;
   justify-content: space-between;
   padding-top: 32px;
   padding-bottom: 32px;
+  border-bottom: var(--color-text-gray) 1px solid;
+}
+
+.main-nav__link {
+  font-weight: 700;
+  color: var(--color-text-gray);
+}
+
+.main-nav__link--active {
+  color: var(--color-text-black);
 }
 
 .intro {
@@ -146,23 +108,34 @@ p {
   padding-bottom: 104px;
 }
 
+.intro__title {
+  margin-bottom: -14px;
+}
+
+.intro__link {
+  font-weight: 700;
+  color: var(--color-text-gray);
+}
+
+.intro__link--active {
+  color: var(--color-text-black);
+}
+
 .intro__inner {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 50px;
 }
 
 .intro__inner p {
   line-height: 130%;
+  text-align: left;
 }
 
 .intro__locale {
   transform: rotate(270deg) translateX(50%) translateY(150%);
   display: flex;
-}
-
-.intro__img {
-  padding-top: 50px;
 }
 
 .features {
@@ -171,9 +144,12 @@ p {
   padding-bottom: 110px;
 }
 
+.features__title {
+  margin-bottom: 18px;
+}
+
 .features__description {
-  width: 500px;
-  margin: 0 auto;
+  text-align: center;
   margin-bottom: 48px;
   line-height: 120%;
 }
@@ -183,8 +159,12 @@ p {
   padding-bottom: 107px;
 }
 
+.skills__title {
+  margin-bottom: 70px;
+}
+
 .skills__description {
-  padding-bottom: 84px;
+  margin-bottom: 84px;
 
 }
 
@@ -199,6 +179,7 @@ p {
   font-size: 14px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .skills__item img {
@@ -212,23 +193,18 @@ p {
   margin-bottom: 40px;
 }
 
-.skills__stars {
-  display: block;
-  font-size: 0;
-}
-
-.skills__stars span {
+.star {
   padding: 0;
   font-size: 18px;
   line-height: 1;
   color: var(--color-text-lightGray);
 }
 
-.skills__stars span:before {
+.star:before {
   content: "★";
 }
 
-.skills__stars span.skills__active {
+.star--active {
   color: var(--color-text-black);
 }
 
@@ -238,27 +214,30 @@ p {
   padding-bottom: 96px;
 }
 
-.portfolio__inner {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.portfolio__title {
+  margin-bottom: 48px;
 }
 
-.portfolio__inner img {
+
+.portfolio img {
   margin-bottom: 44px;
 }
 
-.portfolio__inner a {
+.portfolio a {
   margin-bottom: 100px;
 }
 
-.portfolio__inner a:last-child {
+.portfolio a:last-child {
   margin-bottom: 0;
 }
 
 .contacts {
   padding-top: 114px;
   padding-bottom: 124px;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
 }
 
 .contacts__text {
@@ -268,4 +247,16 @@ p {
 .contacts__descriptions {
   color: var(--color-text-gray);
   margin: 0 auto;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 342px;
+  margin: 0 auto;
+  margin-bottom: 44px;
+}
+
+.socials__links {
+
 }
