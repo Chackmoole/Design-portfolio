@@ -61,6 +61,10 @@ a:hover {
   text-align: center;
 }
 
+.link--active {
+  color: var(--color-text-black);
+}
+
 .layout {
   padding: 0 20px;
   margin: 0 auto;
@@ -110,10 +114,6 @@ a:hover {
   color: var(--color-text-gray);
 }
 
-.main-nav__link--active {
-  color: var(--color-text-black);
-}
-
 .intro {
   padding-top: 40px;
   padding-bottom: 104px;
@@ -126,10 +126,6 @@ a:hover {
 .intro__link {
   font-weight: 700;
   color: var(--color-text-gray);
-}
-
-.intro__link--active {
-  color: var(--color-text-black);
 }
 
 .intro__inner {
